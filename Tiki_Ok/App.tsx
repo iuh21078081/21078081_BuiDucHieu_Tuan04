@@ -18,7 +18,7 @@ export default function App() {
 
   const handleMinus = ()=>{
     setQuantity(quantity > 1 ? quantity - 1 : 1)
-    if(quantity > 1&&totalPrice!=0){
+    if(quantity > 1){
       setTotalPrice((prev)=> prev - (141800))
     }
   }
