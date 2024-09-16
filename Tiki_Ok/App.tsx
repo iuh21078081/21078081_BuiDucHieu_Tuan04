@@ -1,31 +1,30 @@
 import { SafeAreaView, StyleSheet, Text, View, TextInput, Image, TouchableOpacity, Button } from 'react-native';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function App() {
   const [quantity, setQuantity] = useState(1);
   const [discountCode, setDiscountCode] = useState('');
-  const [totalPrice, setTotalPrice] = useState(0)
+  const [totalPrice, setTotalPrice] = useState(141800);
   const handleApplyDiscount = () => {
-    // Xử lý áp dụng mã giảm giá
   };
 
   const handlePlaceOrder = () => {
-    // Xử lý tiến hành đặt hàng
   };
 
   const handlePlus = ()=> {
-    setQuantity(quantity + 1)
-    setTotalPrice(totalPrice*quantity)
+    setQuantity((prev)=> prev + 1)
+    setTotalPrice((prev)=> prev + (141800))
   }
 
   const handleMinus = ()=>{
     setQuantity(quantity > 1 ? quantity - 1 : 1)
-    setTotalPrice(totalPrice - (totalPrice*quantity))
+    if(quantity > 1&&totalPrice!=0){
+      setTotalPrice((prev)=> prev - (141800))
+    }
   }
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* Sản phẩm */}
       <View style={styles.layout1}>
         <View style={styles.productContainer}>
 
