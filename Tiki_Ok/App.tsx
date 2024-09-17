@@ -29,7 +29,7 @@ export default function App() {
         <View style={styles.productContainer}>
 
           <Image
-            source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnbpIzcbNgmoZOfkVJYnQ-3tdAEpUN1W1gDQ&s' }} // Thay bằng URL ảnh thật của sản phẩm
+            source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnbpIzcbNgmoZOfkVJYnQ-3tdAEpUN1W1gDQ&s' }}
             style={styles.productImage}
           />
           <View style={styles.productInfo}>
